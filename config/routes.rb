@@ -1,7 +1,17 @@
-Boxroom::Application.routes.draw do
+Rails.application.routes.draw do
+  
+  # root 'view#route' 
+  get '/readme', to: 'view#readme'
+  get '/quiz', to: 'view#quiz'
   get '/file_exists', :to => 'files#exists'
   get '/signin', :to => 'sessions#new', :as => 'signin'
   delete '/signout', :to => 'sessions#destroy'
+
+#### everything below from Boxroom ####
+
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  root :to => "folders#index"
 
   # Resources
   resources :admins, :only => [:new, :create]
@@ -37,7 +47,4 @@ Boxroom::Application.routes.draw do
     resources :share_links, :only => [:new, :create]
   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => "folders#index"
 end

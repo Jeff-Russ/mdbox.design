@@ -6,8 +6,15 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Boxroom
+module MdboxDesign
   class Application < Rails::Application
+    
+    # config.home_page = 'https://s3.amazonaws.com/markdown.design/geturl.md'
+    # config.home_view = 'top'
+    
+    # config.home_page = 'https://s3.amazonaws.com/jeffruss/get_url.md'
+    # config.home_view = 'top'
+  
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

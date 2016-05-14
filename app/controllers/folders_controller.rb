@@ -8,6 +8,8 @@ class FoldersController < ApplicationController
   before_action :require_update_permission, :only => [:edit, :update]
   before_action :require_delete_permission, :only => :destroy
 
+  layout "boxroom"
+
   def index
     redirect_to Folder.root
   end

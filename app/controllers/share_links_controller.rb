@@ -7,6 +7,8 @@ class ShareLinksController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, NoMethodError, RuntimeError, :with => :redirect_to_root_or_signin_and_show_alert
 
+  layout "boxroom"
+
   def index
     @share_links = ShareLink.active_share_links
   end

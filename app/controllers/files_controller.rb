@@ -7,6 +7,8 @@ class FilesController < ApplicationController
   before_action :require_update_permission, :only => [:edit, :update]
   before_action :require_delete_permission, :only => :destroy
 
+  layout "boxroom"
+
   # @file and @folder are set in require_existing_file
   def show
     send_file @file.attachment.path, :filename => @file.attachment_file_name

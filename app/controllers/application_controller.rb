@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :clipboard, :current_user, :signed_in?, :permitted_params
 
+  layout "boxroom"
+
   protected
 
   def clipboard

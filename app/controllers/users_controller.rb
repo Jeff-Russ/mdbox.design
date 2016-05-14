@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :require_existing_user, :only => [:edit, :update, :destroy, :extend]
   before_action :require_deleted_user_isnt_admin, :only => :destroy
 
+  layout "boxroom"
+
   def index
     @users = User.where.not(:name => nil).order('name')
     @new_users = User.where(:name => nil).order('email')

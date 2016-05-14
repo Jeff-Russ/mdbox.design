@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
   
-  # root 'view#route' 
-  get '/readme', to: 'view#readme'
-  get '/quiz', to: 'view#quiz'
-  get '/file_exists', :to => 'files#exists'
-  get '/signin', :to => 'sessions#new', :as => 'signin'
-  delete '/signout', :to => 'sessions#destroy'
 
 #### everything below from Boxroom ####
 
@@ -46,5 +40,14 @@ Rails.application.routes.draw do
   resources :files, :shallow => :true, :only => :show do
     resources :share_links, :only => [:new, :create]
   end
+
+
+  # root 'view#route' 
+  get '/md', to: 'view#route' # replaced root
+  get '/readme', to: 'view#readme'
+  get '/quiz', to: 'view#quiz'
+  get '/file_exists', :to => 'files#exists'
+  get '/signin', :to => 'sessions#new', :as => 'signin'
+  delete '/signout', :to => 'sessions#destroy'
 
 end

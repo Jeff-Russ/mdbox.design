@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'     # Compressor for JavaScript assets
 gem 'coffee-rails', '~> 4.1.0' # For .coffee assets and views
 gem 'jquery-rails'             # The JavaScript library
 gem 'bootstrap-sass'           #  bootstrap library for styles
+gem 'font-awesome-sass'        # A Library for icons
 
 # App specific gems (boxroom)
 gem 'dynamic_form'
@@ -41,7 +42,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # gem 'factory_girl_rails', group: :test # (boxroom)
 
-# gem 'font-awesome-sass'    # A Library for icons
 # gem 'jbuilder', '~> 2.0'   # Build JSON APIs with ease
 # gem 'bcrypt', '~> 3.1.7'   # Use ActiveModel has_secure_password
 # gem 'turbolinks'           # Makes links in your web app faster

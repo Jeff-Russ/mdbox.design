@@ -8,6 +8,8 @@ require 'cgi'
 
 class ViewController < ApplicationController
    
+   layout false
+
    include Helpers
    include Helpers::OpenUri
    include MdHelpers

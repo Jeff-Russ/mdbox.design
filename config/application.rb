@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module MdboxDesign
   class Application < Rails::Application
+
+    # config.assets.enabled = true
     
     # config.home_page = 'https://s3.amazonaws.com/markdown.design/geturl.md'
     # config.home_view = 'top'

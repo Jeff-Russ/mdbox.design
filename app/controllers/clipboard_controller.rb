@@ -6,6 +6,8 @@ class ClipboardController < ApplicationController
   before_action :require_read_permission, :only => :create
   before_action :require_delete_permission, :only => :move
 
+  layout "boxroom"
+
   # @item is set in require_existing_item
   def create
     clipboard.add(@item)

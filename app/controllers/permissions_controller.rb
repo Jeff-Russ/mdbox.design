@@ -1,6 +1,8 @@
 class PermissionsController < ApplicationController
   before_action :require_admin
 
+  layout "boxroom"
+
   def update_multiple
     if params[:permissions]
       permissions = Permission.update(params[:permissions].keys, params[:permissions].values)

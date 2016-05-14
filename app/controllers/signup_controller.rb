@@ -2,6 +2,8 @@ class SignupController < ApplicationController
   before_action :require_valid_token, :only => [:edit, :update]
   skip_before_action :require_login
 
+  layout "boxroom"
+  
   # Note: @user is set in require_valid_token
   def edit
   end

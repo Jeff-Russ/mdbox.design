@@ -73,6 +73,7 @@ pre {  @extend.codeblock; @extend.greenbox2; margin-left: 7%; max-width: 97%; ma
 .greenwell    { color: #94ba65!important; background-color:#3e423e!important; 
                 border-color:#94ba65 }
 .spacer       { margin-top: 4%;  }
+.spacer-xl    { margin-top: 7%;  }
 .hidden       { visibility: hidden; width: 12%!important;} 
 .fixed        { position: fixed;    }
 .absolute     { position: absolute; }
@@ -183,6 +184,9 @@ color:#94ca55!important;}
                 display:table!important; padding:0;}
 .topbar-btn-w-text { @extend.topbtn-greenwell; position:fixed;
          padding-bottom: 0.8vh!important; padding-top: 1.5vh!important; }
+
+.topbar-text { position:fixed; @extend%topbtn;  top: 1vh;  color:#667344!important;
+         padding-bottom: 0.8vh!important; padding-top: 1vh!important; }
 
 // topbtn's
 .LL-7-toc { width: 8%; left:  4%; }

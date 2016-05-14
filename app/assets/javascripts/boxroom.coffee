@@ -8,6 +8,10 @@ $(window).load ->
   fadeout '#notice'
   fadeout '#alert'
 
+# http://stackoverflow.com/questions/6673777/select-link-by-text-exact-match
+$.expr[':'].textEquals = (a, i, m) ->
+  $(a).text().match '^' + m[3] + '$'
+
 jQuery ->
   $('.back_link').on 'click', (e) ->
     e.preventDefault()

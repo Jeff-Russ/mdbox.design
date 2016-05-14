@@ -1,13 +1,10 @@
-<div id="menu">
-  <p class="menu">
-  <% if signed_in? -%>
-    <%= link_to t(:folders), folders_path %> &nbsp; &nbsp;
-  <% if current_user.member_of_admins? -%>
-    <%= link_to t(:users), users_path %> &nbsp; &nbsp;
-    <%= link_to t(:groups), groups_path %> &nbsp; &nbsp;
-    <%= link_to t(:shared_files), share_links_path %>
-  <% end -%>
-  <% end -%>
-    &nbsp;
-  </p>
-</div>
+
+<% if signed_in? -%>
+  <%= link_to t(:folders), folders_path, class: "topbar-btn-w-text LR-9 printhide" %> &nbsp; &nbsp;
+<% if current_user.member_of_admins? -%>
+  <%= link_to t(:users), users_path, class: "topbar-btn-w-text CL-9 printhide" %> &nbsp; &nbsp;
+  <%= link_to t(:groups), groups_path, class: "topbar-btn-w-text CC-9 printhide" %> &nbsp; &nbsp;
+  <%= link_to t(:shared_files), share_links_path, class: "topbar-btn-w-text CR-9 printhide" %>
+<% end -%>
+<% end -%>
+  &nbsp;

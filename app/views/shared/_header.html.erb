@@ -1,11 +1,13 @@
-<div id="header">
-  <% if signed_in? -%>
-  <div class="user_welcome">
-    <p>
-      <%= t :hello %>, <%= current_user.name %>!<br>
-      <%= link_to t(:settings), edit_user_path(current_user) %> | <%= link_to t(:sign_out), signout_path, :method => :delete %>
-    </p>
-  </div>
-  <% end -%>
-  <%= link_to image_tag('logo.png', :alt => 'Boxroom'), root_path %>
-</div>
+
+<nav id='topbar' class='topbar fixed printhide'></nav>
+<a class="topbar-btn LL-9 jr-img printhide" href='/?pages=home'>
+  <img class='jr-img-css printhide' src='https://s3.amazonaws.com/jeffruss/img/JR_20px_wide.png'/>
+</a>
+
+<% unless signed_in? -%>
+  <a class="topbar-btn-w-text RR-9 printhide" href='/?pages=contact'>Contact</a>
+<% else -%>
+  <p class="topbar-text RL-9 printhide"><%= t :hello %>, <%= current_user.name %>!</p>
+  <%= link_to t(:settings), edit_user_path(current_user), class: "topbar-btn-w-text RC-9 printhide" %>
+  <%= link_to t(:sign_out), signout_path, method: :delete, class: "topbar-btn-w-text RR-9 printhide" %>
+<% end -%>

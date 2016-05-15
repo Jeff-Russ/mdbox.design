@@ -15,11 +15,15 @@ gem 'dynamic_form'
 gem 'acts_as_tree'
 gem 'paperclip'
 gem 'jquery-fileupload-rails'
+# gem 'acts_as_tree_rails3'
 
 # App specific gems (markdown.design)
 gem 'aws-sdk-v1' # For AWS S3 service If paperclip <= v4.3.1
 gem 'redcarpet', '~> 2.1.1' # for markdown support, not 'reverse_markdown'
 gem 'coderay', '~> 1.0.7'   # for markdown support
+
+# ACE editor addition
+gem 'ace-rails-ap'
 
 group :production do
   gem 'pg'             # Use postgresql as the database
@@ -29,10 +33,13 @@ group :production do
   gem 'rack-timeout'   # needed by puma server
 end
 
+
 group :development, :test do
   gem 'sqlite3'  # Use sqlite3 as the database for Active Record
-  gem 'spring'   # speeds up dev by keeping your app running in the bg.
+  # gem 'spring'   # speeds up dev by keeping your app running in the bg.
   gem 'web-console', '~> 2.0' # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'hirb' # format rails console
+  # gem 'irbtools', require: 'irbtools/binding' # format rails console
   # gem 'byebug' # Call 'byebug' to stop execution and debug to console
   # gem 'capistrano-rails'
 end

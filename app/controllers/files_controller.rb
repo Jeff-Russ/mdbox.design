@@ -27,6 +27,14 @@ class FilesController < ApplicationController
 
   # @file and @folder are set in require_existing_file
   def edit
+    puts file_path(@file)
+    # @doc = Nokogiri::HTML(open())
+    # puts @doc
+  end
+
+  # @file and @folder are set in require_existing_file
+  def ace
+    
   end
 
   # @file and @folder are set in require_existing_file

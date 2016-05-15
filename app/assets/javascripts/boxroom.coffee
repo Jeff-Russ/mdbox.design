@@ -3,6 +3,7 @@
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
 //= require files
+# //= require ace
 
 $(window).load ->
   fadeout '#notice'

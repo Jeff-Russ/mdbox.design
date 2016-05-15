@@ -1,14 +1,35 @@
-<% content_for :title, t(:rename_file) -%>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js"></script>
 
-<h1><%= content_for :title %></h1>
-<%= form_for @file, :url => { :action => 'update' } do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :name %>:<br>
-    <%= f.text_field :attachment_file_name %>
-  </p>
-  <p>
-    <%= f.submit t(:save) %> &nbsp; &mdash; &nbsp;
-    <%= link_to t(:back), @folder %>
-  </p>
-<% end %>
+<div id="ace_sidebar">
+   <div class="toc" id="toc">
+    <% content_for :title, t(:edit_file) -%>
+
+    <h1><%= content_for :title %></h1>
+    <%= form_for @file, :url => { :action => 'update' } do |f| %>
+      <%= f.error_messages %>
+      <p>
+        <%= f.label :rename %>:<br>
+        <%= f.text_field :attachment_file_name %>
+      </p>
+      <p>
+        <%= link_to t(:back), @folder %>
+        <%= f.submit t(:save) %> &nbsp; &mdash; &nbsp;
+
+      </p>
+    <% end %>
+
+  </div>
+</div>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js"></script>
+<div id='ace_frame' style="">
+  <div id="editor">function foo(items) {
+      var x = "All this is syntax highlighted";
+      return x;
+  }
+  </div>
+</div>
+<script type="text/javascript">
+  var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/javascript");
+</script>
